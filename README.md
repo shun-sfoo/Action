@@ -12,3 +12,12 @@ a git submodule wrap tools
 - `plug update` update submodules
 - `plug remove -n xxx` remove submodules
 - `plug list` show submodules
+
+## translator
+
+a terminal translator tool support caiyun baidu and youdao
+
+### usage
+
+set .env key I use it to combine neovim like that
+![nvim-translator](./static/nvim-translator.png)
