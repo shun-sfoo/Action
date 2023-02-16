@@ -6,6 +6,7 @@ static COMMON_PACK_PATH: &str = ".";
 static GITHUB_URL: &str = "https://github.com";
 static NVIM_MODULES: &str = "modules";
 static NVIM_SUFFIX: &str = ".nvim";
+static LUA_SUFFIX: &str = ".lua";
 
 #[derive(clap::Parser)]
 struct Args {
@@ -52,7 +53,9 @@ impl PlugInfo {
         assert!(info.len() == 2, "input corrent format 'auther/plug'");
         let plug_name;
         if info[1].ends_with(NVIM_SUFFIX) {
-            plug_name = &info[1][0..(info[1].len() - 5)];
+            plug_name = &info[1][0..(info[1].len() - NVIM_SUFFIX.len())];
+        } else if info[1].ends_with(LUA_SUFFIX) {
+            plug_name = &info[1][0..(info[1].len() - LUA_SUFFIX.len())];
         } else {
             plug_name = &info[1]
         };
