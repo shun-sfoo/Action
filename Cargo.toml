@@ -1,5 +1,8 @@
 [workspace] 
 members = [
   "plug",
-  "translator"
+  "translator",
+  "float",
+  "cpu"
 ]
+
