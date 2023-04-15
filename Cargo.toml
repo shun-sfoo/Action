@@ -3,6 +3,10 @@ members = [
   "plug",
   "translator",
   "float",
-  "cpu"
+  "cpu",
+  "memory",
+  "tutorial",
+  "actionkv",
+  "render-hex"
 ]
 
